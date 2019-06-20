@@ -1,5 +1,2 @@
-const numberIsEvenAndLessThan = something => {
-  return aNumber => {
-    return aNumber % 2 == 0 && aNumber < something;
-  };
-};
+const numberIsEvenAndLessThan = something => aNumber =>
+  aNumber % 2 == 0 && aNumber < something;
