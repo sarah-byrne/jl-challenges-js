@@ -7,4 +7,19 @@ describe("numberIsEvenAndLessThan", function() {
     const isEven = numberIsEvenAndLessThan(100);
     expect(isEven(10)).toEqual(true);
   });
+
+  it("returns a function that returns false when given an odd number", function() {
+    const isEven = numberIsEvenAndLessThan(100);
+    expect(isEven(9)).toEqual(false);
+  });
+
+  it("returns a function that returns true when given an even number that is less than its input", function() {
+    const isEvenAndLessThan100 = numberIsEvenAndLessThan(100);
+    expect(isEvenAndLessThan100(10)).toEqual(true);
+  });
+
+  it("returns a function that returns false when given an even number that is greater than its input", function() {
+    const isEvenAndLessThan100 = numberIsEvenAndLessThan(100);
+    expect(isEvenAndLessThan100(200)).toEqual(false);
+  });
 });
