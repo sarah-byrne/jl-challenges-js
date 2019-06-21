@@ -1,9 +1,11 @@
 const numberIsEvenAndLessThan = something => {
-  if (something == null || !Number.isInteger(something))
-    throw "Integer input required";
-  return aNumber => {
-    if (aNumber == null || !Number.isInteger(aNumber))
+  const isValidInput = input => {
+    if (input == null || !Number.isInteger(input))
       throw "Integer input required";
+  };
+  isValidInput(something);
+  return aNumber => {
+    isValidInput(aNumber);
     return aNumber % 2 == 0 && aNumber < something;
   };
 };
