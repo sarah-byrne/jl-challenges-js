@@ -3,6 +3,21 @@ describe("numberIsEvenAndLessThan", function() {
     expect(typeof numberIsEvenAndLessThan(100)).toEqual("function");
   });
 
+  it("throws an error when given no input", function() {
+    expect(function() {
+      numberIsEvenAndLessThan();
+    }).toThrow("Integer input required");
+  });
+
+  it("throws an error when given a non-integer input", function() {
+    expect(function() {
+      numberIsEvenAndLessThan("a");
+    }).toThrow("Integer input required");
+    expect(function() {
+      numberIsEvenAndLessThan(7.1);
+    }).toThrow("Integer input required");
+  });
+
   it("returns a function that returns true when given an even number that is less than its input", function() {
     const isEvenAndLessThan100 = numberIsEvenAndLessThan(100);
     expect(isEvenAndLessThan100(10)).toEqual(true);
