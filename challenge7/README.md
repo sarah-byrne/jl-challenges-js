@@ -6,7 +6,7 @@ Create a function that, when given an integer input, returns a function that can
 
 In a browser, navigate to `/challenge7/SpecRunner.html` from the project root. This will run the Jasmine tests.
 
-From the same page, you can also use the console to use the function with your own values e.g.
+From the same page, you can also use the console to call the function with your own values e.g.
 
 ```
 > isEvenAndLessThan7 = numberIsEvenAndLessThan(7)
