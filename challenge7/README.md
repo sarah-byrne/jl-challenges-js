@@ -10,7 +10,7 @@ From the same page, you can also use the console to call the function with your 
 
 ```
 > isEvenAndLessThan7 = numberIsEvenAndLessThan(7)
-<   aNumber => aNumber % 2 == 0 && aNumber < something
+<   ...
 > isEvenAndLessThan7(6)
 <   true
 ```
